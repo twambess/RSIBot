@@ -13,8 +13,8 @@ RSI_OVERSOLD=30
 TRADE_SYMBOL='ETHUSDT'
 TRADE_QUANTITY = 0.05
 
-API_KEY ="r0SG9mA4bSmwCKXmTSzJtJIFyNTRj9TTzMwXQMIOzqyFK2tSqsRMgUkZP2zh5xTB"
-API_SECRET="RBwylXmsjOy6rrgDSM1dinJdhfcoBBT3nEeHnNXTNyrHWH2EibNvuRdiJKtGHBbo"
+API_KEY ="your binance api key"
+API_SECRET="your binance api secret key"
 
 #client = Client(API_KEY, API_SECRET, tld='ru')
 
