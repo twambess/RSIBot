@@ -21,6 +21,15 @@ API_SECRET="RBwylXmsjOy6rrgDSM1dinJdhfcoBBT3nEeHnNXTNyrHWH2EibNvuRdiJKtGHBbo"
 closes=[]
 in_position = False
 
+#def order(side, quantity, symbol,order_type=ORDER_TYPE_MARKET):
+  #  try:
+   #     print("sending order")
+    #    print(order)
+   # except Exception as e:
+    #    print("an exception occured - {}".format(e))
+    #    return False
+
+   # return True
 
 def on_open(ws):
     print('opened connection')
@@ -55,7 +64,10 @@ def on_message(ws,message):
             if last_rsi>RSI_OVERBOUGHT:
                 if in_position:
                     print("It is overbought! Sell! Sell! Sell!")
-                    #put binance sell order logic here
+                    #@binance sell order logic here
+                       # order_succeeded = order(SIDE_SELL, TRADE_QUANTITY, TRADE_SYMBOL)
+                        #if order_succeeded:
+                        #in_position = False
                 else:
                     print("We dont own any, nothing to do")
 
@@ -64,7 +76,10 @@ def on_message(ws,message):
                     print("It is oversold, but you already own it, nothing to do")
                 else:
                     print("Buy! Buy! Buy!")
-                    #put binance buy order logic here
+                    #@binance buy order logic here
+                    #order_succeeded = order(SIDE_BUY, TRADE_QUANTITY, TRADE_SYMBOL)
+                   # if order_succeeded:
+                       # in_position = True
 
 
 ws=websocket.WebSocketApp(SOCKET,on_open=on_open,on_close=on_close,on_message=on_message)
